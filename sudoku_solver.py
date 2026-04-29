@@ -12,16 +12,13 @@ def find_empty(board):
 def is_valid(board, num, pos):
     row, col = pos
 
-    # Check row
     if num in board[row]:
         return False
 
-    # Check column
     for i in range(9):
         if board[i][col] == num:
             return False
 
-    # Check 3x3 box
     box_x = col // 3
     box_y = row // 3
 
@@ -51,7 +48,6 @@ def solve(board):
     return False
 
 
-# Example Sudoku (0 = empty)
 board = [
     [5,3,0,0,7,0,0,0,0],
     [6,0,0,1,9,5,0,0,0],
